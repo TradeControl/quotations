@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPriceList" targetNamespace="http://tempuri.org/dsPriceList.xsd" xmlns:mstns="http://tempuri.org/dsPriceList.xsd" xmlns="http://tempuri.org/dsPriceList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPriceList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPriceList" msprop:Generator_UserDSName="dsPriceList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbDetail" msprop:Generator_TableClassName="tbDetailDataTable" msprop:Generator_TableVarName="tabletbDetail" msprop:Generator_TablePropName="tbDetail" msprop:Generator_RowDeletingName="tbDetailRowDeleting" msprop:Generator_RowChangingName="tbDetailRowChanging" msprop:Generator_RowEvHandlerName="tbDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="tbDetailRowDeleted" msprop:Generator_UserTableName="tbDetail" msprop:Generator_RowChangedName="tbDetailRowChanged" msprop:Generator_RowEvArgName="tbDetailRowChangeEvent" msprop:Generator_RowClassName="tbDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerName" msdata:Caption="Customer Name" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" type="xs:string" />
+              <xs:element name="PublishedOn" msdata:Caption="Published" msprop:Generator_ColumnVarNameInTable="columnPublishedOn" msprop:Generator_ColumnPropNameInRow="PublishedOn" msprop:Generator_ColumnPropNameInTable="PublishedOnColumn" msprop:Generator_UserColumnName="PublishedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ValidFromOn" msdata:Caption="Valid From" msprop:Generator_ColumnVarNameInTable="columnValidFromOn" msprop:Generator_ColumnPropNameInRow="ValidFromOn" msprop:Generator_ColumnPropNameInTable="ValidFromOnColumn" msprop:Generator_UserColumnName="ValidFromOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ValidToOn" msdata:Caption="Valid To" msprop:Generator_ColumnVarNameInTable="columnValidToOn" msprop:Generator_ColumnPropNameInRow="ValidToOn" msprop:Generator_ColumnPropNameInTable="ValidToOnColumn" msprop:Generator_UserColumnName="ValidToOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Disclaimer" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Disclaimer" msprop:Generator_ColumnVarNameInTable="columnDisclaimer" msprop:Generator_ColumnPropNameInTable="DisclaimerColumn" msprop:Generator_UserColumnName="Disclaimer" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyLogo" msprop:Generator_ColumnVarNameInTable="columnCompanyLogo" msprop:Generator_ColumnPropNameInRow="CompanyLogo" msprop:Generator_ColumnPropNameInTable="CompanyLogoColumn" msprop:Generator_UserColumnName="CompanyLogo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_UserColumnName="CompanyName" type="xs:string" minOccurs="0" />
+              <xs:element name="Uri" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Uri" msprop:Generator_ColumnVarNameInTable="columnUri" msprop:Generator_ColumnPropNameInTable="UriColumn" msprop:Generator_UserColumnName="Uri" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbProduct" msprop:Generator_TableClassName="tbProductDataTable" msprop:Generator_TableVarName="tabletbProduct" msprop:Generator_TablePropName="tbProduct" msprop:Generator_RowDeletingName="tbProductRowDeleting" msprop:Generator_RowChangingName="tbProductRowChanging" msprop:Generator_RowEvHandlerName="tbProductRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductRowDeleted" msprop:Generator_UserTableName="tbProduct" msprop:Generator_RowChangedName="tbProductRowChanged" msprop:Generator_RowEvArgName="tbProductRowChangeEvent" msprop:Generator_RowClassName="tbProductRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msdata:Caption="Product" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" />
+              <xs:element name="ProductDescription" msdata:Caption="Description" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ProductDescription" msprop:Generator_ColumnVarNameInTable="columnProductDescription" msprop:Generator_ColumnPropNameInTable="ProductDescriptionColumn" msprop:Generator_UserColumnName="ProductDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductImage" msprop:Generator_ColumnVarNameInTable="columnProductImage" msprop:Generator_ColumnPropNameInRow="ProductImage" msprop:Generator_ColumnPropNameInTable="ProductImageColumn" msprop:Generator_UserColumnName="ProductImage" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbQuantity" msprop:Generator_TableClassName="tbQuantityDataTable" msprop:Generator_TableVarName="tabletbQuantity" msprop:Generator_TablePropName="tbQuantity" msprop:Generator_RowDeletingName="tbQuantityRowDeleting" msprop:Generator_RowChangingName="tbQuantityRowChanging" msprop:Generator_RowEvHandlerName="tbQuantityRowChangeEventHandler" msprop:Generator_RowDeletedName="tbQuantityRowDeleted" msprop:Generator_UserTableName="tbQuantity" msprop:Generator_RowChangedName="tbQuantityRowChanged" msprop:Generator_RowEvArgName="tbQuantityRowChangeEvent" msprop:Generator_RowClassName="tbQuantityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msdata:Caption="Product" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" default="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbExtra" msprop:Generator_TableClassName="tbExtraDataTable" msprop:Generator_TableVarName="tabletbExtra" msprop:Generator_TablePropName="tbExtra" msprop:Generator_RowDeletingName="tbExtraRowDeleting" msprop:Generator_RowChangingName="tbExtraRowChanging" msprop:Generator_RowEvHandlerName="tbExtraRowChangeEventHandler" msprop:Generator_RowDeletedName="tbExtraRowDeleted" msprop:Generator_UserTableName="tbExtra" msprop:Generator_RowChangedName="tbExtraRowChanged" msprop:Generator_RowEvArgName="tbExtraRowChangeEvent" msprop:Generator_RowClassName="tbExtraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msdata:Caption="Product" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" />
+              <xs:element name="ExtraName" msdata:Caption="Extra" msprop:Generator_ColumnVarNameInTable="columnExtraName" msprop:Generator_ColumnPropNameInRow="ExtraName" msprop:Generator_ColumnPropNameInTable="ExtraNameColumn" msprop:Generator_UserColumnName="ExtraName" type="xs:string" />
+              <xs:element name="Ordering" msprop:Generator_ColumnVarNameInTable="columnOrdering" msprop:Generator_ColumnPropNameInRow="Ordering" msprop:Generator_ColumnPropNameInTable="OrderingColumn" msprop:Generator_UserColumnName="Ordering" type="xs:int" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbExtraPrice" msprop:Generator_TableClassName="tbExtraPriceDataTable" msprop:Generator_TableVarName="tabletbExtraPrice" msprop:Generator_TablePropName="tbExtraPrice" msprop:Generator_RowDeletingName="tbExtraPriceRowDeleting" msprop:Generator_RowChangingName="tbExtraPriceRowChanging" msprop:Generator_RowEvHandlerName="tbExtraPriceRowChangeEventHandler" msprop:Generator_RowDeletedName="tbExtraPriceRowDeleted" msprop:Generator_UserTableName="tbExtraPrice" msprop:Generator_RowChangedName="tbExtraPriceRowChanged" msprop:Generator_RowEvArgName="tbExtraPriceRowChangeEvent" msprop:Generator_RowClassName="tbExtraPriceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="ExtraName" msprop:Generator_ColumnVarNameInTable="columnExtraName" msprop:Generator_ColumnPropNameInRow="ExtraName" msprop:Generator_ColumnPropNameInTable="ExtraNameColumn" msprop:Generator_UserColumnName="ExtraName" type="xs:string" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbQuote" msprop:Generator_TableClassName="tbQuoteDataTable" msprop:Generator_TableVarName="tabletbQuote" msprop:Generator_TablePropName="tbQuote" msprop:Generator_RowDeletingName="tbQuoteRowDeleting" msprop:Generator_RowChangingName="tbQuoteRowChanging" msprop:Generator_RowEvHandlerName="tbQuoteRowChangeEventHandler" msprop:Generator_RowDeletedName="tbQuoteRowDeleted" msprop:Generator_UserTableName="tbQuote" msprop:Generator_RowChangedName="tbQuoteRowChanged" msprop:Generator_RowEvArgName="tbQuoteRowChangeEvent" msprop:Generator_RowClassName="tbQuoteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msdata:Caption="Product" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" />
+              <xs:element name="QuoteId" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1000" msprop:Generator_ColumnVarNameInTable="columnQuoteId" msprop:Generator_ColumnPropNameInRow="QuoteId" msprop:Generator_ColumnPropNameInTable="QuoteIdColumn" msprop:Generator_UserColumnName="QuoteId" type="xs:int" />
+              <xs:element name="Title" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="QuotedOn" msprop:Generator_ColumnVarNameInTable="columnQuotedOn" msprop:Generator_ColumnPropNameInRow="QuotedOn" msprop:Generator_ColumnPropNameInTable="QuotedOnColumn" msprop:Generator_UserColumnName="QuotedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbQuoteExtra" msprop:Generator_TableClassName="tbQuoteExtraDataTable" msprop:Generator_TableVarName="tabletbQuoteExtra" msprop:Generator_TablePropName="tbQuoteExtra" msprop:Generator_RowDeletingName="tbQuoteExtraRowDeleting" msprop:Generator_RowChangingName="tbQuoteExtraRowChanging" msprop:Generator_RowEvHandlerName="tbQuoteExtraRowChangeEventHandler" msprop:Generator_RowDeletedName="tbQuoteExtraRowDeleted" msprop:Generator_UserTableName="tbQuoteExtra" msprop:Generator_RowChangedName="tbQuoteExtraRowChanged" msprop:Generator_RowEvArgName="tbQuoteExtraRowChangeEvent" msprop:Generator_RowClassName="tbQuoteExtraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" />
+              <xs:element name="QuoteId" msprop:Generator_ColumnVarNameInTable="columnQuoteId" msprop:Generator_ColumnPropNameInRow="QuoteId" msprop:Generator_ColumnPropNameInTable="QuoteIdColumn" msprop:Generator_UserColumnName="QuoteId" type="xs:int" />
+              <xs:element name="ExtraName" msprop:Generator_ColumnVarNameInTable="columnExtraName" msprop:Generator_ColumnPropNameInRow="ExtraName" msprop:Generator_ColumnPropNameInTable="ExtraNameColumn" msprop:Generator_UserColumnName="ExtraName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbDetail" />
+      <xs:field xpath="mstns:CustomerName" />
+    </xs:unique>
+    <xs:unique name="tbProduct_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbProduct" />
+      <xs:field xpath="mstns:ProductName" />
+    </xs:unique>
+    <xs:unique name="tbQuantity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbQuantity" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:Quantity" />
+    </xs:unique>
+    <xs:unique name="tbExtra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbExtra" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:ExtraName" />
+    </xs:unique>
+    <xs:unique name="tbExtraPrice_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbExtraPrice" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:ExtraName" />
+      <xs:field xpath="mstns:Quantity" />
+    </xs:unique>
+    <xs:unique name="tbQuote_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbQuote" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:QuoteId" />
+    </xs:unique>
+    <xs:unique name="tbQuoteExtra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbQuoteExtra" />
+      <xs:field xpath="mstns:QuoteId" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:ExtraName" />
+    </xs:unique>
+    <xs:keyref name="FK_tbQuote_tbQúoteExtra" refer="tbQuote_Constraint1" msprop:rel_Generator_UserChildTable="tbQuoteExtra" msprop:rel_Generator_ChildPropName="GettbQuoteExtraRows" msprop:rel_Generator_UserRelationName="FK_tbQuote_tbQúoteExtra" msprop:rel_Generator_ParentPropName="tbQuoteRowParent" msprop:rel_Generator_RelationVarName="relationFK_tbQuote_tbQúoteExtra" msprop:rel_Generator_UserParentTable="tbQuote" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:tbQuoteExtra" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:QuoteId" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbProduct_tbQuote" refer="tbProduct_Constraint1" msprop:rel_Generator_UserChildTable="tbQuote" msprop:rel_Generator_ChildPropName="GettbQuoteRows" msprop:rel_Generator_UserRelationName="FK_tbProduct_tbQuote" msprop:rel_Generator_ParentPropName="tbProductRow" msprop:rel_Generator_RelationVarName="relationFK_tbProduct_tbQuote" msprop:rel_Generator_UserParentTable="tbProduct" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:tbQuote" />
+      <xs:field xpath="mstns:ProductName" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbExtra_tbExtraPrice" refer="tbExtra_Constraint1" msprop:rel_Generator_UserChildTable="tbExtraPrice" msprop:rel_Generator_ChildPropName="GettbExtraPriceRows" msprop:rel_Generator_UserRelationName="FK_tbExtra_tbExtraPrice" msprop:rel_Generator_ParentPropName="tbExtraRowParent" msprop:rel_Generator_RelationVarName="relationFK_tbExtra_tbExtraPrice" msprop:rel_Generator_UserParentTable="tbExtra" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:tbExtraPrice" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:ExtraName" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbQuantity_tbExtraPrice" refer="tbQuantity_Constraint1" msprop:rel_Generator_UserChildTable="tbExtraPrice" msprop:rel_Generator_ChildPropName="GettbExtraPriceRows" msprop:rel_Generator_UserRelationName="FK_tbQuantity_tbExtraPrice" msprop:rel_Generator_ParentPropName="tbQuantityRowParent" msprop:rel_Generator_RelationVarName="relationFK_tbQuantity_tbExtraPrice" msprop:rel_Generator_UserParentTable="tbQuantity" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:tbExtraPrice" />
+      <xs:field xpath="mstns:ProductName" />
+      <xs:field xpath="mstns:Quantity" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbProduct_tbExtra" refer="tbProduct_Constraint1" msprop:rel_Generator_UserChildTable="tbExtra" msprop:rel_Generator_ChildPropName="GettbExtraRows" msprop:rel_Generator_UserRelationName="FK_tbProduct_tbExtra" msprop:rel_Generator_ParentPropName="tbProductRow" msprop:rel_Generator_RelationVarName="relationFK_tbProduct_tbExtra" msprop:rel_Generator_UserParentTable="tbProduct" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:tbExtra" />
+      <xs:field xpath="mstns:ProductName" />
+    </xs:keyref>
+    <xs:keyref name="tbProduct_tbQuantity" refer="tbProduct_Constraint1" msprop:rel_Generator_UserChildTable="tbQuantity" msprop:rel_Generator_ChildPropName="GettbQuantityRows" msprop:rel_Generator_UserRelationName="tbProduct_tbQuantity" msprop:rel_Generator_ParentPropName="tbProductRow" msprop:rel_Generator_RelationVarName="relationtbProduct_tbQuantity" msprop:rel_Generator_UserParentTable="tbProduct" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:tbQuantity" />
+      <xs:field xpath="mstns:ProductName" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
