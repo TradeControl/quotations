@@ -2,7 +2,14 @@
 
 Communicates product and service prices to customers in XML file format.
 
+First published 1 December 2020
+
 [download the latest release](/releases)
+
+## Documentation
+
+- [overview](https://tradecontrol.github.io/quotation)
+- [tutorial](https://tradecontrol.github.io/tutorials/quotations)
 
 ## Licence
 

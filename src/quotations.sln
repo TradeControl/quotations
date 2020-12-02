@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListFile", "PriceListF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installation", "Installation", "{159BD541-BDE1-4C1C-B713-6EFBEDCB3C0B}"
 	ProjectSection(SolutionItems) = preProject
-		Installation\tradecontrol_quotations.zip = Installation\tradecontrol_quotations.zip
+		Installation\tcQuotations.zip = Installation\tcQuotations.zip
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListQuotes", "PriceListQuotes\PriceListQuotes.csproj", "{EAF54DD4-9F9D-450C-9888-C98A1FDF5D6C}"
