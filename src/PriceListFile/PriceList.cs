@@ -15,7 +15,7 @@ namespace TradeControl.PriceList
     {
         string _fileName;
 
-        public static string AppWebAddress = "http://tradecontrol.online";
+        public static string AppWebAddress = "http://tradecontrol.github.io/quotation";
 
         #region xml file
         public PriceList() { }
