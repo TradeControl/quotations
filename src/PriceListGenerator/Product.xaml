@@ -1,0 +1,33 @@
+﻿<Window x:Class="TradeControl.PriceList.Product"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TradeControl.PriceList"
+        mc:Ignorable="d"
+        Title="Product" Height="300" Width="512" WindowStartupLocation="CenterOwner" Icon="Product.ico" WindowStyle="SingleBorderWindow" ShowInTaskbar="False">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnAccept" Content="Accept" Click="btnAccept_Click" Grid.Column="2" Margin="5" IsDefault="True" />
+        <Button x:Name="btnImage" Content="Image" Grid.Column="2" Grid.Row="1" Margin="5" Padding="5" Click="btnImage_Click" />
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="2" Grid.Row="2" Margin="5" IsCancel="True" />
+        <Label Content="Product Name:" Margin="5" Padding="5" />
+        <TextBox x:Name="tbxProductName" Text="product_name" Grid.Column="1" Margin="5" Padding="5" FontWeight="Bold" />
+        <Label Content="Image File:" Grid.Row="1" Margin="5" Padding="5" />
+        <TextBlock x:Name="tbxFileName" Grid.Row="1" Grid.Column="1" Margin="5" Padding="5" />        
+        <Label Content="Description:" Margin="5" Padding="5" Grid.Row="2" />
+        <TextBox x:Name="tbxProductDescription" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Margin="5" Padding="5" TextWrapping="Wrap" />
+
+
+    </Grid>
+</Window>

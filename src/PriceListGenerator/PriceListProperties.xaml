@@ -1,0 +1,45 @@
+﻿<Window x:Class="TradeControl.PriceList.PriceListProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TradeControl.PriceList"
+        mc:Ignorable="d"
+        Title="Properties" Height="366" Width="512" WindowStartupLocation="CenterOwner" Icon="Properties.ico" WindowStyle="SingleBorderWindow" ShowInTaskbar="False">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnAccept" Content="Accept" Click="btnAccept_Click" Grid.Column="2" Margin="5" IsDefault="True" />
+        <Button x:Name="btnLogo" Content="Logo" Grid.Column="2" Grid.Row="1" Margin="5" Padding="5" Click="btnLogo_Click" />
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="2" Grid.Row="2" Margin="5" Padding="5" IsCancel="True" />
+        <Label Content="Customer:" Margin="5" Padding="5" />
+        <TextBox x:Name="tbxCustomerName" Grid.Column="1" Margin="5" Padding="5" Text="STANDARD PRICE LIST" />
+        <Label Content="Logo File:" Grid.Row="1" Margin="5" Padding="5" />
+        <TextBlock x:Name="tbxFileName" Grid.Row="1" Grid.Column="1" Margin="5" Padding="5" />
+        <Label Content="Company Name:" Grid.Row="2" Margin="5" Padding="5" />
+        <TextBox x:Name="tbxCompanyName" Grid.Row="2" Grid.Column="1" Margin="5" Padding="5" />
+        <Label Content="Url:" Grid.Row="3" Margin="5" Padding="5" />
+        <TextBox x:Name="tbxUri" Grid.Row="3" Grid.Column="1" Margin="5" Padding="5" />
+        <Label Content="Valid From:" Margin="5" Padding="5" Grid.Row="4" />
+        <DatePicker x:Name="dteValidFrom" Grid.Column="1" Grid.Row="4" Margin="5" Padding="5" />
+        <Label Content="Valid To:" Margin="5" Padding="5" Grid.Row="5" />
+        <DatePicker x:Name="dteValidTo" Grid.Column="1" Grid.Row="5" Margin="5" Padding="5" />
+        <Label Content="Published On:" Margin="5" Padding="5" Grid.Row="6" />
+        <DatePicker x:Name="dtePublishedOn" Grid.Column="1" Grid.Row="6" Margin="5" Padding="5" />
+        <Label Content="Disclaimer:" Margin="5" Padding="5" Grid.Row="7" />
+        <TextBox x:Name="tbxDisclaimer" Margin="5" Padding="5" Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" />
+    </Grid>
+</Window>

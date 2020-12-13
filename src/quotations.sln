@@ -12,10 +12,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListFile", "PriceListF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installation", "Installation", "{159BD541-BDE1-4C1C-B713-6EFBEDCB3C0B}"
 	ProjectSection(SolutionItems) = preProject
+		Installation\tcPriceLists.zip = Installation\tcPriceLists.zip
 		Installation\tcQuotations.zip = Installation\tcQuotations.zip
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListQuotes", "PriceListQuotes\PriceListQuotes.csproj", "{EAF54DD4-9F9D-450C-9888-C98A1FDF5D6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceListGenerator", "PriceListGenerator\PriceListGenerator.csproj", "{B7E2FA34-8F0D-434E-8FD8-7192204B4279}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +34,10 @@ Global
 		{EAF54DD4-9F9D-450C-9888-C98A1FDF5D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAF54DD4-9F9D-450C-9888-C98A1FDF5D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAF54DD4-9F9D-450C-9888-C98A1FDF5D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E2FA34-8F0D-434E-8FD8-7192204B4279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E2FA34-8F0D-434E-8FD8-7192204B4279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E2FA34-8F0D-434E-8FD8-7192204B4279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E2FA34-8F0D-434E-8FD8-7192204B4279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

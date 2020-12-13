@@ -15,7 +15,7 @@ namespace TradeControl.PriceList
     {
         string _fileName;
 
-        public static string AppWebAddress = "http://tradecontrol.github.io/tutorials/quotations";
+        public static string AppWebAddress = "http://tradecontrol.online";
 
         #region xml file
         public PriceList() { }
@@ -33,6 +33,14 @@ namespace TradeControl.PriceList
             {
                 return new FileInfo(_fileName);
             }
+        }
+
+        public void NewFile(string fileName)
+        {
+            _fileName = fileName;
+            Clear();
+            Save();
+            IsEdited = false;
         }
 
         public void Save()
@@ -58,6 +66,33 @@ namespace TradeControl.PriceList
         #endregion
 
         #region details
+        public void SetDetails(string customerName, string companyName, Uri uri, DateTime validFromOn, DateTime validToOn, string disclaimer)
+        {
+            var detailRow = tbDetail.Select(d => d).FirstOrDefault();
+            bool isEmpty = (tbDetail.Count == 0);
+             
+            if (isEmpty)
+                detailRow = tbDetail.NewtbDetailRow();
+
+            detailRow.CustomerName = customerName;
+            detailRow.CompanyName = companyName;
+            detailRow.Uri = uri != null ? uri.AbsoluteUri : string.Empty;
+            detailRow.PublishedOn = DateTime.Today;
+            detailRow.ValidFromOn = validFromOn;
+            detailRow.ValidToOn = validToOn;
+            detailRow.Disclaimer = disclaimer;
+
+            if (isEmpty)
+                tbDetail.AddtbDetailRow(detailRow);
+
+        }
+
+        public void SetLogo(byte[] companyLogo)
+        {
+            var detailRow = tbDetail.Select(d => d).FirstOrDefault();
+            detailRow.CompanyLogo = companyLogo;
+        }
+
         public MemoryStream CompanyLogo
         {
             get
@@ -98,6 +133,124 @@ namespace TradeControl.PriceList
             }
         }
 
+        #endregion
+
+        #region product maintenance
+        public void AddProduct(string productName, string productDescription)
+        {
+            var productRow = tbProduct.FindByProductName(productName);
+            if (productRow == null)
+            {
+                productRow = tbProduct.NewtbProductRow();
+                productRow.ProductName = productName;
+                productRow.ProductDescription = productDescription;
+                tbProduct.AddtbProductRow(productRow);
+            }
+            else
+                productRow.ProductDescription = productDescription;
+        }
+
+        public void SetProductImage(string productName, byte[] productImage)
+        {
+            var productRow = tbProduct.FindByProductName(productName);
+            productRow.ProductImage = productImage;
+        }
+
+        public void DeleteProduct(string productName)
+        {
+            var productRow = tbProduct.FindByProductName(productName);
+            if (productRow != null)
+                tbProduct.RemovetbProductRow(productRow);
+        }
+
+        public void AddQuanity(string productName, int quantity, double price)
+        {
+            var quantityRow = tbQuantity.FindByProductNameQuantity(productName, quantity);
+            if (quantityRow == null)
+            {
+                quantityRow = tbQuantity.NewtbQuantityRow();
+                quantityRow.ProductName = productName;
+                quantityRow.Quantity = quantity;
+                quantityRow.Price = price;
+                tbQuantity.AddtbQuantityRow(quantityRow);
+            }
+            else
+                quantityRow.Price = price;
+        }
+
+        public void DeleteQuantity(string productName, int quantity)
+        {
+            var quantityRow = tbQuantity.FindByProductNameQuantity(productName, quantity);
+            if (quantityRow == null)
+                tbQuantity.RemovetbQuantityRow(quantityRow);
+        }
+
+        public void AddExtra(string productName, string extraName)
+        {
+            int ordering = tbExtra.Where(e => e.ProductName == productName).Count() == 0 ? 10 : tbExtra.Where(e => e.ProductName == productName).Max(e => e.Ordering) + 10;
+
+            var extraRow = tbExtra.FindByProductNameExtraName(productName, extraName);
+            if (extraRow == null)
+            {
+                extraRow = tbExtra.NewtbExtraRow();
+                extraRow.ProductName = productName;
+                extraRow.ExtraName = extraName;
+                extraRow.Ordering = ordering;
+                tbExtra.AddtbExtraRow(extraRow);
+            }
+        }
+
+        public void DeleteExtra(string productName, string extraName)
+        {
+            var extraRow = tbExtra.FindByProductNameExtraName(productName, extraName);
+            if (extraRow != null)
+                tbExtra.RemovetbExtraRow(extraRow);
+        }
+
+        public void AddExtraPrice(string productName, string extraName, int quantity, double price)
+        {
+            var quantityRow = tbExtraPrice.FindByProductNameExtraNameQuantity(productName, extraName, quantity);
+            if (quantityRow == null)
+            {
+                quantityRow = tbExtraPrice.NewtbExtraPriceRow();
+                quantityRow.ProductName = productName;
+                quantityRow.Quantity = quantity;
+                quantityRow.ExtraName = extraName;
+                quantityRow.Price = price;
+                tbExtraPrice.AddtbExtraPriceRow(quantityRow);
+            }
+            else
+                quantityRow.Price = price;
+        }
+
+        public void DeleteExtraPrice(string productName, string extraName, int quantity)
+        {
+            var quantityRow = tbExtraPrice.FindByProductNameExtraNameQuantity(productName, extraName, quantity);
+            if (quantityRow == null)
+                tbExtraPrice.RemovetbExtraPriceRow(quantityRow);
+        }
+
+        public void MoveDownExtra(string productName, string extraName)
+        {
+            int extraOrder = tbExtra.Where(p => p.ProductName == productName && p.ExtraName == extraName).Select(e => e.Ordering).FirstOrDefault();
+            int nextOrder = tbExtra.Where(p => p.ProductName == productName && p.Ordering > extraOrder).Select(e => e.Ordering).Min();
+            string nextExtra = tbExtra.Where(p => p.ProductName == productName && p.Ordering == nextOrder).Select(e => e.ExtraName).First();
+            var extraRow = tbExtra.FindByProductNameExtraName(productName, extraName);
+            extraRow.Ordering = nextOrder;
+            extraRow = tbExtra.FindByProductNameExtraName(productName, nextExtra);
+            extraRow.Ordering = extraOrder;
+        }
+
+        public void MoveUpExtra(string productName, string extraName)
+        {
+            int extraOrder = tbExtra.Where(p => p.ProductName == productName && p.ExtraName == extraName).Select(e => e.Ordering).FirstOrDefault();
+            int nextOrder = tbExtra.Where(p => p.ProductName == productName && p.Ordering < extraOrder).Select(e => e.Ordering).Max();
+            string nextExtra = tbExtra.Where(p => p.ProductName == productName && p.Ordering == nextOrder).Select(e => e.ExtraName).First();
+            var extraRow = tbExtra.FindByProductNameExtraName(productName, extraName);
+            extraRow.Ordering = nextOrder;
+            extraRow = tbExtra.FindByProductNameExtraName(productName, nextExtra);
+            extraRow.Ordering = extraOrder;
+        }
         #endregion
 
         #region product retrieval
@@ -157,6 +310,17 @@ namespace TradeControl.PriceList
                     .Select(p => p.Price).FirstOrDefault();
         }
 
+        public bool IsFirstExtra(string productName, string extraName)
+        {
+            return tbExtra.Where(p => p.ProductName == productName && p.ExtraName == extraName).Select(e => e.Ordering).FirstOrDefault()
+                == tbExtra.Where(p => p.ProductName == productName).Select(e => e.Ordering).Min();
+        }
+
+        public bool IsLastExtra(string productName, string extraName)
+        {
+            return tbExtra.Where(p => p.ProductName == productName && p.ExtraName == extraName).Select(e => e.Ordering).FirstOrDefault()
+                == tbExtra.Where(p => p.ProductName == productName).Select(e => e.Ordering).Max();
+        }
         #endregion
 
         #region live quote
