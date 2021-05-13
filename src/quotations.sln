@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{44C30CB3-589F-4EA0-B0FB-3C96BD2EB2CF}"
 	ProjectSection(SolutionItems) = preProject
+		..\changelog.md = ..\changelog.md
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject
